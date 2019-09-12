@@ -1,0 +1,78 @@
+/* .overlay-image {
+  position: relative;
+  height: calc(100vh - (84px));
+} */
+/* Image originale */
+/* .overlay-image .image {
+  display: block;
+  width: 100%;
+  height: auto;
+} */
+/* Texte original */
+/* .overlay-image .text {
+  color: #fff;
+  font-size: 4vw;
+  line-height: 1.5em;
+  text-shadow: 2px 2px 2px rgb(246, 12, 168);
+  text-align: center;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+} */
+
+/* .overlay-image .hover {
+  position: absolute;
+  top: 4px;
+  height: 150%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  display: flex;
+} */
+/* Apparition overlay sur passage souris */
+/* .img-home-start:hover .hover {
+  opacity: 1;
+} */
+.home-imgs {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: calc(100vh - (84px));
+}
+
+.home-imgs .img1 {
+  width: 103%;
+}
+
+.text {
+  position: absolute;
+  color: white;
+  text-shadow: 2px 2px 2px rgb(246, 12, 168);
+  font-size: 3rem;
+  top: 10%;
+  left: 20%;
+}
+
+.img2-container {
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.5s ease;
+}
+
+.img2-container .img2 {
+  width: 103%;
+}
+
+.home-imgs:hover .img2-container {
+  opacity: 1;
+}
+
+/* .home-imgs .img2 {
+  width: 100%;
+} */

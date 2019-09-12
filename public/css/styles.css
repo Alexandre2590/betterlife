@@ -1,0 +1,43 @@
+
+.bgimg1 {
+  background-image: url("../medias/img/forest.jpg");
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+
+border-bottom: 5px solid;
+border-top: 5px solid;
+border-color: #f5cb4e;
+opacity: 0.9;
+background-color: black;
+}
+.bmg2{
+    min-height: 92vh;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    border-bottom: 10px solid;
+  border-top: 5px solid;
+  border-color: #f5cb4e;
+  
+
+}
+
+.heading{
+    border-bottom: 14px solid;
+    border-top: 14px solid;
+    border-color: #f5cb4e;
+  
+    }
+
+
+    /* .ok {color: black;
+        border-color: #f5cb4e;
+        border: 2px solid;
+background-color: white;
+translate: "HELLO";
+
+    }
+     */
+    
+

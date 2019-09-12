@@ -1,0 +1,56 @@
+<div class="big-container product-manage-wrapper flexed-item">
+  <form action="/profil" method="post" class="add-product-form" enctype="multipart/form-data">
+    <form action="/profil" method="post" class="add-product-form">
+      {{#if msg}}
+      <p class="msg {{msg.statu}}">{{msg.txt}}</p>
+      {{/if}}
+      <h3 class="form-title">Add YOUR PROFIL TO THE COMMUNITY</h3>
+      <div class="form-item-wrapper flexed-item">
+        <label for="sneacker-name" class="label-name label">Work</label>
+        <input id="sneacker-name" type="text" class="input-text input" placeholder="Web dev" value="Web developer"
+          name="work">
+      </div>
+      <div class="form-item-wrapper flexed-item">
+        <label for="sneacker-ref" class="label-ref label">Salary</label>
+        <input id="sneacker-ref" type="text" class="input-text input" placeholder="salaire" value="1 000 000 $"
+          name="salaire">
+      </div>
+      <div class="form-item-wrapper flexed-item">
+        <label for="sneacker-size" class="label-ref label">Age</label>
+        <input id="sneacker-size" type="number" class="input-text input" placeholder="ex: 37" value="29" name="age">
+      </div>
+      <div class="form-item-wrapper flexed-item">
+        <label for="sneacker-descr" class="label-descr label">Experience</label>
+        <input id="sneacker-descr" type="text" class="input-text input" placeholder="The better sneakers to run"
+          value="Your experience" name="decription">
+      </div>
+      <div class="form-item-wrapper flexed-item">
+        <label for="sneacker-price" class="label-price label">Country</label>
+        <input id="sneacker-price" type="text" class="sneacker-price input" name="country" value="France">
+      </div>
+      <div class="form-item-wrapper flexed-item">
+        <label for="sneaker-img" class="label-price label">Image</label>
+        <input id="sneaker-img" type="file" class="sneacker-price input" name="photo">
+      </div>
+      <div class="form-item-wrapper flexed-item">
+        <label for="category" class="label-main-cat label">Gender</label>
+        <select id="category" class="select" required name="product_category">
+          <option value="-1" disabled selected>Choose a category</option>
+          <option value="men">Men</option>
+          <option value="women">Women</option>
+        </select>
+      </div>
+
+      <button class="button-primary add-sneacker-btn">Add to community</button>
+    </form>
+
+    {{!-- <div class="add-tag-form">
+    <p id="add-tag-message" class="msg"></p>
+    <h3 class="form-title">Add tags</h3>
+    <div class="form-item-wrapper flexed-item">
+      <label for="category-name" class="category-name label">Sneaker tag</label>
+      <input id="new_tag_name" type="text" class="input" placeholder="ex: Gangsta">
+    </div>
+    <button id="btn_new_tag" class="button-primary add-category-btn">Create this category</button>
+  </div>
+</div> --}}
