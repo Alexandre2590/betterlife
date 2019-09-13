@@ -1,3 +1,7 @@
+td {
+  border: 1px solid;
+  padding: 10px;
+}
 
 .bgimg1 {
   background-image: url("../medias/img/forest.jpg");
@@ -5,39 +9,85 @@
   background-position: center;
   background-size: cover;
 
-border-bottom: 5px solid;
-border-top: 5px solid;
-border-color: #f5cb4e;
-opacity: 0.9;
-background-color: black;
-}
-.bmg2{
-    min-height: 92vh;
-    background-position: center;
-    background-size: cover;
-    color: white;
-    border-bottom: 10px solid;
+  border-bottom: 5px solid;
   border-top: 5px solid;
   border-color: #f5cb4e;
-  
-
+  opacity: 0.9;
+  background-color: black;
+}
+.bmg2 {
+  min-height: 92vh;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  border-bottom: 10px solid;
+  border-top: 5px solid;
+  border-color: #f5cb4e;
 }
 
-.heading{
-    border-bottom: 14px solid;
-    border-top: 14px solid;
-    border-color: #f5cb4e;
-  
-    }
+.heading {
+  border-bottom: 14px solid;
+  border-top: 14px solid;
+  border-color: #f5cb4e;
+}
 
+#container {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  height: 300px;
+  width: 300px;
+  margin-left: 30px;
+}
 
-    /* .ok {color: black;
-        border-color: #f5cb4e;
-        border: 2px solid;
-background-color: white;
-translate: "HELLO";
+#container > div {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(-45deg, #788cff, #b4c8ff);
+}
 
-    }
-     */
-    
+.profil-container {
+  padding: 12px 1.2rem 60px;
+}
 
+.profil-container .profils {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profil-container .individual {
+  max-width: 320px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.profil-container .imgprof {
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  height: 180px;
+  width: 300px;
+}
+
+@media (max-width: 700px) {
+  .profil-container h2 {
+    text-align: center;
+  }
+
+  .profil-container .profils {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+#searchbar{position:relative; width:1040px; height:auto;
+padding: 10px;
+}
+.formulaire               {display:inline-block;}
+.formulaire .champ       {width:600px; height:35px;}
+.formulaire .bouton       { background-image: url(images/searchbar_button.png);background-repeat: no-repeat;width: 35px;height: 35px;padding: 0; }

@@ -9,8 +9,6 @@ router.post("/signup", (req, res, next) => {
   const theUseremail = req.body.email;
   const theUserpassword = req.body.password;
 
-
-
   if (
     theUserLastname === "" ||
     theUserpassword === "" ||
@@ -22,7 +20,6 @@ router.post("/signup", (req, res, next) => {
     });
     return;
   }
-  
 
   User.findOne({ email: theUseremail })
     .then(user => {
@@ -32,7 +29,7 @@ router.post("/signup", (req, res, next) => {
         });
         return;
       }
-     
+
       const salt = bcrypt.genSaltSync(10); // cryptography librairie
       const hashed = bcrypt.hashSync(theUserpassword, salt);
       const newUser = {};
@@ -73,7 +70,7 @@ router.post("/signin", (req, res, next) => {
       if (bcrypt.compareSync(thePassword, user.password)) {
         // Save the login in the session!
         req.session.currentUser = user;
-        res.redirect("/");
+        res.redirect("/profil");
       } else {
         res.render("signup", {
           errorMessage: "Incorrect password"
@@ -83,6 +80,13 @@ router.post("/signin", (req, res, next) => {
     .catch(error => {
       next(error);
     });
+});
+
+router.get("/logout", (req, res, next) => {
+  req.session.destroy(err => {
+    // can't access session here
+    res.redirect("/");
+  });
 });
 
 module.exports = router;

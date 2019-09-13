@@ -1,16 +1,26 @@
-<h2>PROFIL !!!!!!!!!!!!!!!!!</h2>
-{{#each profil}}
+<div id="searchbar">
+
+  <h1>What would you like to search?</h1>
+  <form action="" class="formulaire">
+    <input class="champ" type="text" value="Search...)" />
+    <input class="bouton" type="button" value=" " />
+
+  </form>
+</div>
 
 
-<p>
-  <img src=" {{this.image}}" alt="image not found">
-  {{this.work}}
-  {{this.country}}
-  {{this.salaire}}
-  {{this.description}}
-  <button>delete</button>
-</p>
-
-{{/each}}
-
-</form>
+<div class="profil-container">
+  <h2>PROFIL !!!</h2>
+  <div class="profils">
+    {{#each profil}}
+    <div id="container_{{@index}}" class="individual">
+      <div class="imgprof" style="background: url('{{this.image}}')"></div>
+      {{!-- <img src=" " alt="image not found"> --}}
+      <p>{{this.work}}</p>
+      {{this.country}}
+      <p><b>-- {{this.salaire}} --</b></p>
+      <p>{{this.description}}</p>
+    </div>
+    {{/each}}
+  </div>
+</div>

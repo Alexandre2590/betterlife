@@ -34,17 +34,6 @@ router.get("/signin", (req, res) => {
   res.render("signin");
 });
 
-router.get("/logout", (req, res, next) => {
-  req.session.destroy(err => {
-    // can't access session here
-    res.redirect("/");
-  });
-});
-
-router.get("/prod-manage", (req, res) => {
-  res.render("products_manage");
-});
-
 router.get("/job", (req, res) => {
   res.render("test");
 });
